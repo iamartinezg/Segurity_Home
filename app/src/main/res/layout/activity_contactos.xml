@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Contactos"
+    android:background="@drawable/fondo_degrado">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.widget.Toolbar
+            android:id="@+id/barraSuperior"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="-6dp"
+            android:elevation="-4dp">
+
+            <TextView
+                android:id="@+id/textoContactos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/anonymouspro_bold"
+                android:text="CONTACTOS"
+                android:textAlignment="center"
+                android:textSize="40sp"></TextView>
+        </android.widget.Toolbar>
+
+        <ListView
+            android:id="@+id/contactsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:scrollbars="vertical"
+            android:divider="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"/>
+
+        <android.widget.Toolbar
+            android:id="@+id/barraInferior"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="-4dp"
+            android:layout_alignParentBottom="true"            >
+            <ImageView
+                android:id="@+id/imagenLogoToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo_securityhome"
+                android:layout_gravity="center">
+            </ImageView>
+        </android.widget.Toolbar>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

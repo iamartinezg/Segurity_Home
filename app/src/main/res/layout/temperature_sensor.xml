@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sensorTemperature"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingBottom="16dp"
+    android:background="@drawable/fondo_degrado">
+
+    <android.widget.Toolbar
+        android:id="@+id/barra1_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:elevation="-4dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sensor_temp"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/anonymouspro_bold"
+            ></TextView>
+    </android.widget.Toolbar>
+
+    <com.example.proyecto.activities.TemperatureActivity
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/temperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        app:innerColor="#FE60C5"
+        app:middleColor="@color/white"
+        app:outerColor="@color/black"
+        app:radius="60dp"
+        />
+    <android.widget.Toolbar
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="-4dp"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/imagenLogoToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_securityhome"
+            android:layout_gravity="center">
+        </ImageView>
+    </android.widget.Toolbar>
+
+</RelativeLayout>
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/fondo_degrado"
+    tools:context=".activities.Servicio">
+
+    <android.widget.Toolbar
+        android:id="@+id/barra1_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="-4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/anonymouspro_bold"
+            android:text="@string/sensores"
+            android:textSize="30sp"></TextView>
+    </android.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/sensorMove"
+            android:layout_width="300dp"            android:layout_height="120dp"
+            android:backgroundTint="@color/gris_claro"
+            android:drawableLeft="@mipmap/sensormove_foreground"
+            android:text="Sensor de Proximidad"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="16dp"></Button>
+
+        <Button
+            android:id="@+id/sensorHumo"
+            android:layout_width="300dp"            android:layout_height="120dp"
+            android:backgroundTint="@color/gris_claro"
+            android:drawableLeft="@mipmap/sensorhumo_foreground"
+            android:text="Sensor de Humo"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="16dp"></Button>
+
+        <Button
+            android:id="@+id/sensorTemp"
+            android:layout_width="300dp"            android:layout_height="120dp"
+            android:backgroundTint="@color/gris_claro"
+            android:drawableLeft="@mipmap/sensortemp_foreground"
+            android:text="Sensor de Temperatura"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="16dp"></Button>
+
+        <Button
+            android:id="@+id/sensorAper"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:backgroundTint="@color/gris_claro"
+            android:drawableLeft="@mipmap/sensoraper_foreground"
+            android:text="Sensor de Apertura"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="16dp"></Button>
+    </LinearLayout>
+
+    <android.widget.Toolbar
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="-4dp">
+
+        <ImageView
+            android:id="@+id/imagenLogoToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/logo_securityhome"></ImageView>
+    </android.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

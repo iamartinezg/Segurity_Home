@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degrado"
+    tools:context=".activities.ChatFamiliar">
+    <android.widget.Toolbar
+        android:id="@+id/barraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="MissingConstraints"
+        android:elevation="-4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/anonymouspro_bold">
+        </TextView>
+    </android.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutFamiliaLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linearLayoutFamiliaLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="80dp"
+                    android:text="Familia"
+                    android:textSize="30sp"></TextView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/logo_securityhome"></ImageView>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatMessages"
+                android:layout_width="match_parent"
+                android:layout_height="367dp"
+                android:divider="@android:color/transparent"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/toolsBottomBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolsBottomBar"
+                android:layout_width="411dp"
+                android:layout_height="59dp"
+                android:layout_margin="4dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pa">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/messageEdit"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/message_chat_hint"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sendImageButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textAutoComplete" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/sendImageButton"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:scaleX="3"
+                    android:scaleY="3"
+                    app:layout_constraintEnd_toStartOf="@+id/sendButton"
+                    app:lottie_autoPlay="false"
+                    app:lottie_rawRes="@raw/camera_button" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/sendButton"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleX="2.2"
+                    android:scaleY="2.2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:lottie_autoPlay="false"
+                    app:lottie_rawRes="@raw/messaje_send_animation" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <android.widget.Toolbar
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imagenLogoToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/logo_securityhome">
+
+        </ImageView>
+    </android.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>
